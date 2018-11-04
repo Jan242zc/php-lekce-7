@@ -1,0 +1,10 @@
+{% for stat in stats %}
+    {{ stat }}
+    <br>
+{% endfor %}
+<br>
+{{ stats.bestseller|capitalize }}
+<br>
+{{ stats.lastUpdate|date("d.m.Y") }}
+<br>
+<a href="{{ path('product_index') }}">Výpis</a>
