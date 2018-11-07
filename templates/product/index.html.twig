@@ -1,8 +1,23 @@
 {% extends 'base.html.twig' %}
 
+{% block navbar %}
+    <table>
+        <tr>
+            <td><b><a href="{{ path('product_index') }}">Výpis produktů</a></b></td>
+            <td>|</td>
+            <td><a href="{{ path('purchase_order_index') }}">Výpis objednávek</a></td>
+            <td>|</td>
+            <td><a href="{{ path('product_new') }}">Nový produkt</a></td>
+            <td>|</td>
+            <td><a href="{{ path('purchase_order_new') }}">Nová objednávka</a></td>
+         </tr>
+    </table>
+{% endblock %}
+
 {% block title %}Products index{% endblock %}
 
 {% block body %}
+<body style="background-color:lightgreen;">
     <h1>Products index</h1>
 
     <table class="table">
@@ -40,5 +55,5 @@
     <a href="{{ path('product_new') }}">Create new</a>
     <br>
     <a href="{{ path('product_stats') }}">Statistiky</a>
+    </body>
 {% endblock %}
-

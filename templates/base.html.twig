@@ -2,6 +2,8 @@
 <html>
     <head>
         <meta charset="UTF-8">
+        {% block navbar %}{%endblock%}
+        {% block number_found %} Počet nalezených položek: {{pocet}}{% endblock %}
         <title>{% block title %}Welcome!{% endblock %}</title>
         {% block stylesheets %}{% endblock %}
     </head>
