@@ -1,0 +1,39 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}List
+    
+{% endblock %}
+
+{% block navbar %}
+    <a href="{{ path('list') }}">list</a>
+    <a href="{{ path('test_known') }}">known</a> <br> <br>
+{%endblock%}
+
+{% block body %}
+
+<table class="table">
+        <tbody>
+        
+        
+            <tr>
+                <th>Id</th>
+            {% for programmingLanguage in programmingLanguageRepository %}
+                <td>{{ programmingLanguage.id }}</td>
+            {% end for %}
+            </tr>
+            <tr>
+                <th>TestString</th>
+             {% for programmingLanguage in programmingLanguageRepository %}
+                <td>{{ programmingLanguage.testString }}</td>
+                {% end for %}
+            </tr>
+            <tr>
+                <th>TestBoolean</th>
+                 {% for programmingLanguage in programmingLanguageRepository %}
+                <td>{{ programmingLanguage.testBoolean }}</td>
+                {% end for %}
+            </tr>
+        </tbody>
+    </table>
+
+{% endblock %}

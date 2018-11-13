@@ -1,0 +1,32 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}Purchases{% endblock %}
+
+{% block body %}
+
+<table class="table">
+        <tbody>
+            <tr>
+                <th>Id</th>
+                <td>{{ product.id }}</td>
+            </tr>
+            <tr>
+                <th>Name</th>
+                <td>{{ product.name }}</td>
+            </tr>
+            <tr>
+                <th>Description</th>
+                <td>{{ product.description }}</td>
+            </tr>
+            <tr>
+                <th>Price</th>
+                <td>{{ product.price }}</td>
+            </tr>
+            <tr>
+                <th>Stock</th>
+                <td>{{ product.stock }}</td>
+            </tr>
+        </tbody>
+    </table>
+
+{% endblock%}

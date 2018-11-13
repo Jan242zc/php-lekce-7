@@ -1,0 +1,13 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}Edit ProgrammingLanguage{% endblock %}
+
+{% block body %}
+    <h1>Edit ProgrammingLanguage</h1>
+
+    {{ include('programming_language/_form.html.twig', {'button_label': 'Update'}) }}
+
+    <a href="{{ path('programming_language_index') }}">back to list</a>
+
+    {{ include('programming_language/_delete_form.html.twig') }}
+{% endblock %}

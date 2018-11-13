@@ -20,7 +20,8 @@ class PurchaseOrderController extends AbstractController
      */
     public function index(PurchaseOrderRepository $purchaseOrderRepository): Response
     {
-        return $this->render('purchase_order/index.html.twig', ['purchase_orders' => $purchaseOrderRepository->findAll(), 'pocet' => count($purchaseOrderRepository->findAll())]);
+        return $this->render('purchase_order/index.html.twig', ['purchase_orders' => 
+        $purchaseOrderRepository->findAll(), 'pocet' => count($purchaseOrderRepository->findAll())]);
     }
 
     /**

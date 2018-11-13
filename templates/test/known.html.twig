@@ -1,0 +1,20 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}Known
+
+{% endblock %}
+
+{% block navbar %}
+    <a href="{{ path('list') }}">list</a>
+    <a href="{{ path('test_known') }}">known</a> <br> <br>
+{%endblock%}
+
+{% block body %}
+
+{% for language in progLgs %}
+
+{{ language.TestString }} <br>
+
+{% endfor %}
+
+{% endblock %}
