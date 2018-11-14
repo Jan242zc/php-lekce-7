@@ -1,0 +1,44 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}Authors{% endblock %}
+
+{% block body %}
+    {% for author in books %}
+    <table class="table">
+        <thead>
+            <tr>
+                <th>Id</th>
+                <th>Pocet_stran</th>
+                <th>Autor</th>
+                <th>Rok_vydani</th>
+                <th>Cena</th>
+                <th>actions</th>
+            </tr>
+        </thead>
+        <tbody>
+        {% for book in author %}
+            
+            <tr>
+                <td>{{ book.id }}</td>
+                <td>{{ book.pocetStran }}</td>
+                <td>{{ book.autor }}</td>
+                <td>{{ book.rokVydani }}</td>
+                <td>{{ book.cena }}</td>
+                <td>
+                    <a href="{{ path('book_show', {'id': book.id}) }}">show</a>
+                    <a href="{{ path('book_edit', {'id': book.id}) }}">edit</a>
+                </td>
+            </tr>
+            
+        {% else %}
+            <tr>
+                <td colspan="6">no records found</td>
+            </tr>
+        {% endfor %}
+        </tbody>
+    </table>
+    
+    <br>
+    
+    {% endfor %}
+{% endblock %}
